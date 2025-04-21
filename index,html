@@ -1,3 +1,4 @@
+<!-- index.html -->
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -142,25 +143,25 @@
       <img src="https://github.com/ialiwaris/imagesforialiwaris/blob/main/20250131_153450.jpg?raw=true" alt="Irtza Ali Waris"/>
       <h3>Who is Irtza Ali Waris?</h3>
       <p>Irtza Ali Waris is a tech enthusiast, developer, and content creator who shares insights on trends, innovations, and industry experiences.</p>
-      <button onclick="window.location.href='post1.html'">Read more</button>
+      <button onclick="window.location.href='about.html'">Read more</button>
     </div>
     <div class="article-card">
       <img src="https://images.unsplash.com/photo-1581090700227-1e8e50cfa9b2?auto=format&fit=crop&w=800&q=80" alt="5G Tech"/>
-      <h3>Breaking News: Latest Tech Innovations</h3>
+      <h3>Post 1: Latest Tech Innovations</h3>
       <p>Find detailed insights on the latest breakthroughs in technology and apps.</p>
-      <button onclick="window.location.href='post2.html'">Read more</button>
+      <button onclick="window.location.href='post1.html'">Read more</button>
     </div>
     <div class="article-card">
       <img src="https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=800&q=80" alt="World News"/>
-      <h3>Global Updates: World News Roundup</h3>
+      <h3>Post 2: World News Roundup</h3>
       <p>Catch up on the most important global news and headlines.</p>
-      <button onclick="window.location.href='post3.html'">Read more</button>
+      <button onclick="window.location.href='post2.html'">Read more</button>
     </div>
     <div class="article-card">
       <img src="https://images.unsplash.com/photo-1555949963-aa79dcee981c?auto=format&fit=crop&w=800&q=80" alt="AI Future"/>
-      <h3>In–Depth: The Future of AI</h3>
+      <h3>Post 3: The Future of AI</h3>
       <p>Explore the growing trends and insights into Artificial Intelligence.</p>
-      <button onclick="window.location.href='post4.html'">Read more</button>
+      <button onclick="window.location.href='post3.html'">Read more</button>
     </div>
   </section>
 
