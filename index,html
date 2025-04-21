@@ -1,240 +1,191 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>NewsHub by Irtza</title>
-    <style>
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
-
-        body {
-            font-family: 'Poppins', sans-serif;
-            line-height: 1.6;
-            background-color: #f5f5f5;
-            color: #333;
-        }
-
-        header {
-            background-color: #800000; /* Maroon */
-            color: white;
-            padding: 20px 0;
-            text-align: center;
-        }
-
-        header h1 {
-            font-size: 3rem;
-            margin-bottom: 10px;
-        }
-
-        nav a {
-            color: white;
-            text-decoration: none;
-            padding: 0 15px;
-            font-size: 1.2rem;
-        }
-
-        nav a:hover {
-            text-decoration: underline;
-        }
-
-        .hero {
-            background-color: #fff;
-            padding: 50px 0;
-            text-align: center;
-        }
-
-        .hero h2 {
-            font-size: 2.5rem;
-            color: #800000;
-        }
-
-        .hero p {
-            font-size: 1.1rem;
-            color: #555;
-            margin-top: 10px;
-        }
-
-        .hero .btn {
-            display: inline-block;
-            padding: 10px 20px;
-            background-color: #800000;
-            color: white;
-            text-decoration: none;
-            border-radius: 5px;
-            margin-top: 20px;
-        }
-
-        .hero .btn:hover {
-            background-color: #660000;
-        }
-
-        .blog-section {
-            background-color: #fff;
-            padding: 50px 0;
-        }
-
-        .blog-post {
-            background-color: #fff;
-            border-radius: 8px;
-            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
-            margin-bottom: 30px;
-            overflow: hidden;
-        }
-
-        .blog-post img {
-            width: 100%;
-            height: auto;
-        }
-
-        .blog-post h3 {
-            font-size: 1.8rem;
-            color: #800000;
-            margin: 20px;
-        }
-
-        .blog-post p {
-            font-size: 1rem;
-            margin: 20px;
-            color: #555;
-        }
-
-        .blog-post a {
-            display: inline-block;
-            text-decoration: none;
-            padding: 10px 20px;
-            background-color: #800000;
-            color: white;
-            border-radius: 5px;
-            margin: 20px;
-        }
-
-        .blog-post a:hover {
-            background-color: #660000;
-        }
-
-        .contact-section {
-            background-color: #fff;
-            padding: 50px 0;
-            text-align: center;
-        }
-
-        .contact-section h2 {
-            font-size: 2rem;
-            color: #800000;
-            margin-bottom: 20px;
-        }
-
-        .contact-section form {
-            max-width: 500px;
-            margin: 0 auto;
-            text-align: left;
-        }
-
-        .contact-section input,
-        .contact-section textarea {
-            width: 100%;
-            padding: 10px;
-            margin-bottom: 20px;
-            border-radius: 5px;
-            border: 1px solid #ddd;
-        }
-
-        .contact-section button {
-            width: 100%;
-            padding: 10px;
-            background-color: #800000;
-            color: white;
-            border: none;
-            border-radius: 5px;
-            cursor: pointer;
-        }
-
-        .contact-section button:hover {
-            background-color: #660000;
-        }
-
-        footer {
-            background-color: #800000;
-            color: white;
-            text-align: center;
-            padding: 20px 0;
-            margin-top: 20px;
-        }
-
-        footer p {
-            font-size: 1rem;
-        }
-    </style>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Newshub by Irtza</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background: #fffaf8;
+      color: #222;
+      scroll-behavior: smooth;
+    }
+    header {
+      background: #7b1e2e;
+      color: white;
+      padding: 20px 0;
+      text-align: center;
+    }
+    nav {
+      background: #5e1624;
+      text-align: center;
+      padding: 10px 0;
+    }
+    nav a {
+      color: white;
+      text-decoration: none;
+      margin: 0 15px;
+      font-weight: 500;
+    }
+    section {
+      padding: 50px 20px;
+    }
+    .hero {
+      text-align: center;
+    }
+    .hero h2 {
+      color: #7b1e2e;
+      font-size: 2rem;
+    }
+    .hero p {
+      font-size: 1.1rem;
+      margin: 10px 0 20px;
+    }
+    .hero button {
+      padding: 10px 20px;
+      background: #7b1e2e;
+      color: white;
+      border: none;
+      border-radius: 5px;
+      font-size: 1rem;
+      cursor: pointer;
+    }
+    .articles {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: 20px;
+    }
+    .article-card {
+      background: white;
+      border-radius: 10px;
+      overflow: hidden;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    }
+    .article-card img {
+      width: 100%;
+      height: 200px;
+      object-fit: cover;
+    }
+    .article-card h3 {
+      margin: 10px;
+      font-size: 1.2rem;
+    }
+    .article-card p {
+      margin: 0 10px 10px;
+      font-size: 0.95rem;
+      color: #444;
+    }
+    .article-card button {
+      margin: 10px;
+      padding: 8px 16px;
+      background: #7b1e2e;
+      color: white;
+      border: none;
+      border-radius: 5px;
+      font-size: 0.9rem;
+      cursor: pointer;
+    }
+    .contact, .about, .policy {
+      background: #fff1f1;
+    }
+    .contact h2, .about h2, .policy h2 {
+      color: #7b1e2e;
+      text-align: center;
+    }
+    form {
+      max-width: 400px;
+      margin: 0 auto;
+    }
+    form input, form textarea {
+      width: 100%;
+      padding: 10px;
+      margin-bottom: 15px;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+      font-size: 1rem;
+    }
+    form button {
+      padding: 10px 20px;
+      background: #7b1e2e;
+      color: white;
+      border: none;
+      border-radius: 5px;
+      font-size: 1rem;
+      cursor: pointer;
+    }
+  </style>
 </head>
-
 <body>
-    <header>
-        <div class="container">
-            <h1>NewsHub by Irtza</h1>
-            <nav>
-                <a href="#home">Home</a>
-                <a href="#blog">Blog</a>
-                <a href="#contact">Contact</a>
-            </nav>
-        </div>
-    </header>
 
-    <section id="home" class="hero">
-        <div class="container">
-            <h2>Stay Updated with the Latest News</h2>
-            <p>Your source for all the trending news, technology, and stories from around the world!</p>
-            <a href="#blog" class="btn">Read Latest Articles</a>
-        </div>
-    </section>
+  <header>
+    <h1>NEWSHUB BY IRTZA</h1>
+  </header>
 
-    <section id="blog" class="blog-section">
-        <div class="container">
-            <div class="blog-post">
-                <img src="https://via.placeholder.com/600x400" alt="Post 1">
-                <h3>Breaking News: Latest Tech Innovations</h3>
-                <p>Discover the latest in the world of technology, gadgets, and apps...</p>
-                <a href="#">Read more</a>
-            </div>
+  <nav>
+    <a href="#home">Home</a>
+    <a href="#blog">Blog</a>
+    <a href="#about">About</a>
+    <a href="#policy">Privacy Policy</a>
+    <a href="#contact">Contact</a>
+  </nav>
 
-            <div class="blog-post">
-                <img src="https://via.placeholder.com/600x400" alt="Post 2">
-                <h3>Global Updates: World News Roundup</h3>
-                <p>Catch up on world events that are shaping our future...</p>
-                <a href="#">Read more</a>
-            </div>
+  <section id="home" class="hero">
+    <h2>Stay Updated with the Latest News</h2>
+    <p>Your source for all the trending news, technology, and stories from around the world!</p>
+    <button onclick="location.href='#blog'">Read Latest Articles</button>
+  </section>
 
-            <div class="blog-post">
-                <img src="https://via.placeholder.com/600x400" alt="Post 3">
-                <h3>In-Depth: The Future of AI</h3>
-                <p>Explore the potential and risks of artificial intelligence in today's world...</p>
-                <a href="#">Read more</a>
-            </div>
-        </div>
-    </section>
+  <section id="blog" class="articles">
+    <div class="article-card">
+      <img src="https://github.com/ialiwaris/imagesforialiwaris/blob/main/20250131_153450.jpg?raw=true" alt="Irtza Ali Waris"/>
+      <h3>Who is Irtza Ali Waris?</h3>
+      <p>Irtza Ali Waris is a tech enthusiast, developer, and content creator who shares insights on trends, innovations, and industry experiences.</p>
+    </div>
+    <div class="article-card">
+      <img src="https://images.unsplash.com/photo-1581090700227-1e8e50cfa9b2?auto=format&fit=crop&w=800&q=80" alt="5G Tech"/>
+      <h3>Breaking News: Latest Tech Innovations</h3>
+      <p>Find detailed insights on the latest breakthroughs in technology and apps.</p>
+      <button onclick="window.location.href='blogs.html#post1'">Read more</button>
+    </div>
+    <div class="article-card">
+      <img src="https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=800&q=80" alt="World News"/>
+      <h3>Global Updates: World News Roundup</h3>
+      <p>Catch up on the most important global news and headlines.</p>
+      <button onclick="window.location.href='blogs.html#post2'">Read more</button>
+    </div>
+    <div class="article-card">
+      <img src="https://images.unsplash.com/photo-1555949963-aa79dcee981c?auto=format&fit=crop&w=800&q=80" alt="AI Future"/>
+      <h3>In–Depth: The Future of AI</h3>
+      <p>Explore the growing trends and insights into Artificial Intelligence.</p>
+      <button onclick="window.location.href='blogs.html#post3'">Read more</button>
+    </div>
+  </section>
 
-    <section id="contact" class="contact-section">
-        <div class="container">
-            <h2>Contact Us</h2>
-            <p>If you have any questions or suggestions, feel free to reach out to us!</p>
-            <form action="mailto:irtzaaliwaris@gmail.com" method="post" enctype="text/plain">
-                <input type="text" name="name" placeholder="Your Name" required>
-                <input type="email" name="email" placeholder="Your Email" required>
-                <textarea name="message" placeholder="Your Message" required></textarea>
-                <button type="submit">Send Message</button>
-            </form>
-        </div>
-    </section>
+  <section id="about" class="about">
+    <h2>About Us</h2>
+    <p style="max-width: 800px; margin: auto; text-align: center;">
+      Newshub by Irtza is a platform designed to bring you the latest news and deep insights into technology, innovation, and world affairs. Founded by Irtza Ali Waris, a passionate tech enthusiast and creator.
+    </p>
+  </section>
 
-    <footer>
-        <div class="container">
-            <p>&copy; 2025 NewsHub by Irtza. All rights reserved.</p>
-        </div>
-    </footer>
+  <section id="policy" class="policy">
+    <h2>Privacy Policy</h2>
+    <p style="max-width: 800px; margin: auto; text-align: center;">
+      We value your privacy. Any data you share with us through forms is protected and not shared with third parties. Your use of this site means you accept our policy.
+    </p>
+  </section>
+
+  <section id="contact" class="contact">
+    <h2>Contact Us</h2>
+    <p style="text-align: center;">If you have any questions or suggestions, feel free to reach out to us!</p>
+    <form action="https://formspree.io/f/your-form-id" method="POST">
+      <input type="email" name="email" placeholder="Your Email" required>
+      <textarea name="message" rows="5" placeholder="Your Message" required></textarea>
+      <button type="submit">Send Message</button>
+    </form>
+  </section>
+
 </body>
-
 </html>
