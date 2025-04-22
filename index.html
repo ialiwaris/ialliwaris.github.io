@@ -1,195 +1,102 @@
-<!-- index.html -->
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-8120127412364371"
-     crossorigin="anonymous"></script>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Newshub by Irtza</title>
-  <style>
-    body {
-      margin: 0;
-      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-      background: #fffaf8;
-      color: #222;
-      scroll-behavior: smooth;
-    }
-    header {
-      background: #7b1e2e;
-      color: white;
-      padding: 20px 0;
-      text-align: center;
-    }
-    nav {
-      background: #5e1624;
-      text-align: center;
-      padding: 10px 0;
-    }
-    nav a {
-      color: white;
-      text-decoration: none;
-      margin: 0 15px;
-      font-weight: 500;
-    }
-    section {
-      padding: 50px 20px;
-    }
-    .hero {
-      text-align: center;
-    }
-    .hero h2 {
-      color: #7b1e2e;
-      font-size: 2rem;
-    }
-    .hero p {
-      font-size: 1.1rem;
-      margin: 10px 0 20px;
-    }
-    .hero button {
-      padding: 10px 20px;
-      background: #7b1e2e;
-      color: white;
-      border: none;
-      border-radius: 5px;
-      font-size: 1rem;
-      cursor: pointer;
-    }
-    .articles {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-      gap: 20px;
-    }
-    .article-card {
-      background: white;
-      border-radius: 10px;
-      overflow: hidden;
-      box-shadow: 0 4px 8px rgba(0,0,0,0.1);
-    }
-    .article-card img {
-      width: 100%;
-      height: 200px;
-      object-fit: cover;
-    }
-    .article-card h3 {
-      margin: 10px;
-      font-size: 1.2rem;
-    }
-    .article-card p {
-      margin: 0 10px 10px;
-      font-size: 0.95rem;
-      color: #444;
-    }
-    .article-card button {
-      margin: 10px;
-      padding: 8px 16px;
-      background: #7b1e2e;
-      color: white;
-      border: none;
-      border-radius: 5px;
-      font-size: 0.9rem;
-      cursor: pointer;
-    }
-    .contact, .about, .policy {
-      background: #fff1f1;
-    }
-    .contact h2, .about h2, .policy h2 {
-      color: #7b1e2e;
-      text-align: center;
-    }
-    form {
-      max-width: 400px;
-      margin: 0 auto;
-    }
-    form input, form textarea {
-      width: 100%;
-      padding: 10px;
-      margin-bottom: 15px;
-      border: 1px solid #ccc;
-      border-radius: 5px;
-      font-size: 1rem;
-    }
-    form button {
-      padding: 10px 20px;
-      background: #7b1e2e;
-      color: white;
-      border: none;
-      border-radius: 5px;
-      font-size: 1rem;
-      cursor: pointer;
-    }
-  </style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>IrtzaLink</title>
+    <style>
+        body { font-family: Arial, sans-serif; background-color: #f4f4f9; padding: 20px; }
+        .container { width: 100%; max-width: 400px; margin: 0 auto; padding: 20px; border: 1px solid #ddd; background-color: #fff; border-radius: 8px; box-shadow: 0 4px 8px rgba(0,0,0,0.1); }
+        .btn { background-color: #1a73e8; color: white; padding: 10px; border: none; border-radius: 5px; width: 100%; cursor: pointer; }
+        .btn:hover { background-color: #0c59c4; }
+        .card { display: flex; justify-content: center; align-items: center; margin-top: 20px; }
+        .qr-code { margin-top: 10px; text-align: center; }
+    </style>
 </head>
 <body>
 
-  <header>
-    <h1>NEWSHUB BY IRTZA</h1>
-  </header>
-
-  <nav>
-    <a href="#home">Home</a>
-    <a href="#blog">Blog</a>
-    <a href="#about">About</a>
-    <a href="#policy">Privacy Policy</a>
-    <a href="#contact">Contact</a>
-  </nav>
-
-  <section id="home" class="hero">
-    <h2>Stay Updated with the Latest News</h2>
-    <p>Your source for all the trending news, technology, and stories from around the world!</p>
-    <button onclick="location.href='#blog'">Read Latest Articles</button>
-  </section>
-
-  <section id="blog" class="articles">
-    <div class="article-card">
-      <img src="https://github.com/ialiwaris/imagesforialiwaris/blob/main/20250131_153450.jpg?raw=true" alt="Irtza Ali Waris"/>
-      <h3>Who is Irtza Ali Waris?</h3>
-      <p>Irtza Ali Waris is a tech enthusiast, developer, and content creator who shares insights on trends, innovations, and industry experiences.</p>
-      <button onclick="window.location.href='irtza.html'">Read more</button>
+    <div class="container">
+        <h2>Login or Sign Up</h2>
+        <div id="user-form">
+            <input type="email" id="email" placeholder="Enter your email" required><br><br>
+            <input type="password" id="password" placeholder="Enter your password" required><br><br>
+            <button class="btn" onclick="signUp()">Sign Up</button><br><br>
+            <button class="btn" onclick="login()">Login</button>
+        </div>
+        
+        <div id="user-card" style="display:none;">
+            <h3>Your Virtual Card</h3>
+            <div class="card">
+                <p id="user-name">John Doe</p>
+                <div class="qr-code" id="qr-code"></div>
+            </div>
+            <button class="btn" onclick="generateQRCode()">Generate QR Code</button>
+        </div>
     </div>
-    <div class="article-card">
-      <img src="https://images.unsplash.com/photo-1581090700227-1e8e50cfa9b2?auto=format&fit=crop&w=800&q=80" alt="5G Tech"/>
-      <h3>Post 1: Latest Tech Innovations</h3>
-      <p>Find detailed insights on the latest breakthroughs in technology and apps.</p>
-      <button onclick="window.location.href='post1.html'">Read more</button>
-    </div>
-    <div class="article-card">
-      <img src="https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=800&q=80" alt="World News"/>
-      <h3>Post 2: World News Roundup</h3>
-      <p>Catch up on the most important global news and headlines.</p>
-      <button onclick="window.location.href='post2.html'">Read more</button>
-    </div>
-    <div class="article-card">
-      <img src="https://images.unsplash.com/photo-1555949963-aa79dcee981c?auto=format&fit=crop&w=800&q=80" alt="AI Future"/>
-      <h3>Post 3: The Future of AI</h3>
-      <p>Explore the growing trends and insights into Artificial Intelligence.</p>
-      <button onclick="window.location.href='post3.html'">Read more</button>
-    </div>
-  </section>
 
-  <section id="about" class="about">
-    <h2>About Us</h2>
-    <p style="max-width: 800px; margin: auto; text-align: center;">
-      Newshub by Irtza is a platform designed to bring you the latest news and deep insights into technology, innovation, and world affairs. Founded by Irtza Ali Waris, a passionate tech enthusiast and creator.
-    </p>
-  </section>
+    <!-- Firebase SDK -->
+    <script src="https://www.gstatic.com/firebasejs/9.6.1/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/9.6.1/firebase-auth.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/9.6.1/firebase-firestore.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/qrcode"></script>
 
-  <section id="policy" class="policy">
-    <h2>Privacy Policy</h2>
-    <p style="max-width: 800px; margin: auto; text-align: center;">
-      We value your privacy. Any data you share with us through forms is protected and not shared with third parties. Your use of this site means you accept our policy.
-    </p>
-  </section>
+    <script>
+        // Firebase Configuration (replace with your actual firebaseConfig)
+        const firebaseConfig = {
+            apiKey: "AIzaSyDGrbtcBWTGWTXDioDtvbfEk-5kOk8T55Y",
+            authDomain: "irtzalink.firebaseapp.com",
+            projectId: "irtzalink",
+            storageBucket: "irtzalink.firebasestorage.app",
+            messagingSenderId: "508469488804",
+            appId: "1:508469488804:web:623cbd559e8961aa108a31",
+            measurementId: "G-33MWVH39K3"
+        };
+        
+        // Initialize Firebase
+        const app = firebase.initializeApp(firebaseConfig);
+        const auth = firebase.auth();
+        const firestore = firebase.firestore();
 
-  <section id="contact" class="contact">
-    <h2>Contact Us</h2>
-    <p style="text-align: center;">If you have any questions or suggestions, feel free to reach out to us!</p>
-    <form action="https://formspree.io/f/your-form-id" method="POST">
-      <input type="email" name="email" placeholder="Your Email" required>
-      <textarea name="message" rows="5" placeholder="Your Message" required></textarea>
-      <button type="submit">Send Message</button>
-    </form>
-  </section>
+        // Sign up function
+        function signUp() {
+            const email = document.getElementById('email').value;
+            const password = document.getElementById('password').value;
+            
+            auth.createUserWithEmailAndPassword(email, password)
+                .then(userCredential => {
+                    const user = userCredential.user;
+                    localStorage.setItem('user', JSON.stringify(user));
+                    document.getElementById('user-form').style.display = 'none';
+                    document.getElementById('user-card').style.display = 'block';
+                    document.getElementById('user-name').innerText = user.email;
+                })
+                .catch(error => alert(error.message));
+        }
+
+        // Login function
+        function login() {
+            const email = document.getElementById('email').value;
+            const password = document.getElementById('password').value;
+            
+            auth.signInWithEmailAndPassword(email, password)
+                .then(userCredential => {
+                    const user = userCredential.user;
+                    localStorage.setItem('user', JSON.stringify(user));
+                    document.getElementById('user-form').style.display = 'none';
+                    document.getElementById('user-card').style.display = 'block';
+                    document.getElementById('user-name').innerText = user.email;
+                })
+                .catch(error => alert(error.message));
+        }
+
+        // Generate QR Code for user profile
+        function generateQRCode() {
+            const user = JSON.parse(localStorage.getItem('user'));
+            const qrCodeData = `https://irtzalink.com/#/${user.uid}`;
+            const qrCode = new QRCode(document.getElementById("qr-code"), qrCodeData);
+        }
+    </script>
 
 </body>
 </html>
+
