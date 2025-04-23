@@ -4,14 +4,14 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Irtza's AI Tools Hub</title>
-   <!-- Google AdSense Script -->
+  <!-- Google AdSense Script -->
   <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-8120127412364371"
      crossorigin="anonymous"></script>
   <style>
     body {
       font-family: 'Arial', sans-serif;
       margin: 0;
-      background: #fafafa;
+      background: #f4f7fa;
       color: #333;
     }
     header {
@@ -20,16 +20,51 @@
       padding: 50px 20px;
       text-align: center;
       border-bottom: 2px solid #004f63;
+      display: flex;
+      justify-content: flex-start;
+      align-items: center;
+    }
+    header .profile-container {
+      width: 25%;
+      text-align: center;
+      background-color: white;
+      padding: 20px;
+      margin-right: 30px;
+      border-radius: 10px;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    }
+    header .profile-container img {
+      width: 100px;
+      height: 100px;
+      object-fit: cover;
+      border-radius: 50%;
+      margin-bottom: 10px;
+    }
+    header .profile-container h2 {
+      font-size: 2em;
+      font-family: 'Helvetica', sans-serif;
+      margin: 0;
+      color: #005f73;
+    }
+    header .profile-container p {
+      font-size: 1.1em;
+      color: #555;
+      margin-top: 5px;
+      font-family: 'Verdana', sans-serif;
     }
     header h1 {
-      margin: 0;
       font-size: 3em;
+      font-family: 'Arial', sans-serif;
       letter-spacing: 2px;
+      margin-top: 20px;
+      text-align: center;
     }
     header p {
-      margin-top: 10px;
       font-size: 1.3em;
       font-weight: lighter;
+      margin-top: 10px;
+      font-family: 'Verdana', sans-serif;
+      text-align: center;
     }
     .container {
       max-width: 1200px;
@@ -37,10 +72,11 @@
       padding: 0 20px;
     }
     .section-title {
-      font-size: 2em;
+      font-size: 2.5em;
       text-align: center;
       margin-bottom: 40px;
       color: #004f63;
+      font-family: 'Arial', sans-serif;
     }
     .grid {
       display: grid;
@@ -67,12 +103,12 @@
       margin-bottom: 20px;
     }
     .card h3 {
-      font-size: 1.5em;
+      font-size: 1.6em;
       margin: 10px 0;
       color: #005f73;
     }
     .card p {
-      font-size: 1.1em;
+      font-size: 1.2em;
       color: #444;
       margin-bottom: 20px;
     }
@@ -96,15 +132,42 @@
     footer p {
       font-size: 1em;
     }
+    .btn-container {
+      display: flex;
+      justify-content: center;
+      margin-top: 20px;
+    }
+    .btn-container a {
+      background-color: #008CBA;
+      color: white;
+      padding: 10px 20px;
+      text-decoration: none;
+      margin: 0 10px;
+      border-radius: 5px;
+      font-size: 1.1em;
+      transition: background-color 0.3s ease;
+    }
+    .btn-container a:hover {
+      background-color: #005f73;
+    }
   </style>
 </head>
 <body>
 
   <header>
-    <h1>Irtza's AI Tools Hub</h1>
-    <p>Discover Free AI Tools with Premium Features — Curated by Irtza</p>
+    <div class="profile-container">
+      <img src="https://github.com/ialiwaris/imagesforialiwaris/blob/main/20250131_153450.jpg?raw=true" alt="Irtza Ali Waris">
+      <h2>Irtza Ali Waris</h2>
+      <p><p>"With Every Step, You’re Shaping Your Future(Stay Blessed...🙂)"</p>
+</p>
+</p>
+</p>
+    </div>
+    <div>
+      <h1>Irtza's AI Tools Hub</h1>
+      <p>Discover Free AI Tools with Premium Features — Curated by Irtza</p>
+    </div>
   </header>
-
   <div class="container">
     <div class="section-title">Top 50 Free AI Tools</div>
     <div class="grid">
@@ -497,15 +560,17 @@
   <p>AI music composition tool for creating custom music tracks.</p>
   <a href="https://www.aiva.ai" target="_blank">Visit</a>
 </div>
-
-
-      <!-- Tool 21-50 (Continue with other tools in similar format) -->
-      <!-- Add the remaining tools here in the same manner -->
     </div>
   </div>
 
   <footer>
+    <div class="btn-container">
+      <a href="about-us.html" target="_blank">About Us</a>
+      <a href="contact-us.html" target="_blank">Contact Us</a>
+      <a href="privacy-policy.html" target="_blank">Privacy Policy</a>
+    </div>
     <p>&copy; 2025 Irtza's AI Tools Hub | Curated by Irtza</p>
   </footer>
+
 </body>
 </html>
