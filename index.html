@@ -1,13 +1,11 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
- 
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Irtza's AI Tools Hub</title>
   <!-- Google AdSense Script -->
-<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-8120127412364371"
-     crossorigin="anonymous"></script>
+  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-8120127412364371" crossorigin="anonymous"></script>
   <style>
     body {
       font-family: 'Arial', sans-serif;
@@ -78,11 +76,21 @@
       margin-bottom: 40px;
       color: #004f63;
       font-family: 'Arial', sans-serif;
+      position: relative;
+    }
+    .section-title:after {
+      content: "";
+      display: block;
+      width: 100px;
+      height: 4px;
+      background: #008CBA;
+      margin: 15px auto;
     }
     .grid {
       display: grid;
       grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
       gap: 30px;
+      margin-bottom: 60px;
     }
     .card {
       background: #fff;
@@ -92,10 +100,11 @@
       transition: 0.3s ease-in-out;
       text-align: center;
       padding: 20px;
+      border-top: 4px solid #008CBA;
     }
     .card:hover {
-      transform: scale(1.05);
-      box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+      transform: translateY(-10px);
+      box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15);
     }
     .card img {
       width: 80px;
@@ -109,9 +118,10 @@
       color: #005f73;
     }
     .card p {
-      font-size: 1.2em;
-      color: #444;
+      font-size: 1.1em;
+      color: #666;
       margin-bottom: 20px;
+      line-height: 1.5;
     }
     .card a {
       color: #fff;
@@ -120,15 +130,19 @@
       border-radius: 5px;
       text-decoration: none;
       font-weight: bold;
+      transition: all 0.3s ease;
+      display: inline-block;
     }
     .card a:hover {
       background: #005f73;
+      transform: scale(1.05);
     }
     footer {
       background: #333;
       color: #fff;
       padding: 25px;
       text-align: center;
+      margin-top: 50px;
     }
     footer p {
       font-size: 1em;
@@ -136,20 +150,67 @@
     .btn-container {
       display: flex;
       justify-content: center;
-      margin-top: 20px;
+      margin: 30px 0;
+      flex-wrap: wrap;
     }
     .btn-container a {
       background-color: #008CBA;
       color: white;
-      padding: 10px 20px;
+      padding: 12px 25px;
       text-decoration: none;
-      margin: 0 10px;
+      margin: 10px;
       border-radius: 5px;
       font-size: 1.1em;
-      transition: background-color 0.3s ease;
+      transition: all 0.3s ease;
+      border: 2px solid #008CBA;
     }
     .btn-container a:hover {
-      background-color: #005f73;
+      background-color: transparent;
+      color: #008CBA;
+    }
+    .category-nav {
+      display: flex;
+      justify-content: center;
+      margin: 30px 0;
+      flex-wrap: wrap;
+    }
+    .category-nav a {
+      color: #005f73;
+      background: #e6f7ff;
+      padding: 10px 20px;
+      margin: 5px;
+      border-radius: 30px;
+      text-decoration: none;
+      font-weight: bold;
+      transition: all 0.3s ease;
+      border: 2px solid #b3e5fc;
+    }
+    .category-nav a:hover {
+      background: #008CBA;
+      color: white;
+      border-color: #008CBA;
+    }
+    .back-to-top {
+      position: fixed;
+      bottom: 30px;
+      right: 30px;
+      background: #008CBA;
+      color: white;
+      width: 50px;
+      height: 50px;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-decoration: none;
+      font-size: 1.5em;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+      transition: all 0.3s ease;
+      z-index: 100;
+    }
+    .back-to-top:hover {
+      background: #005f73;
+      transform: translateY(-5px);
     }
   </style>
 </head>
@@ -157,420 +218,404 @@
 
   <header>
     <div class="profile-container">
-  <img src="https://github.com/ialiwaris/imagesforialiwaris/blob/main/20250131_153450.jpg?raw=true" alt="Irtza Ali Waris">
-  <h2>Irtza Ali Waris</h2>
-  <p>"With Every Step, You’re Shaping Your Future(Stay Blessed...🙂)"</p>
-  <a href="irtza.html" target="_blank" style="display:inline-block; margin-top:15px; padding:10px 20px; background-color:#008CBA; color:white; text-decoration:none; border-radius:5px; font-weight:bold;">Resume</a>
-</div>
-
-</p>
-</p>
+      <img src="https://github.com/ialiwaris/imagesforialiwaris/blob/main/20250131_153450.jpg?raw=true" alt="Irtza Ali Waris">
+      <h2>Irtza Ali Waris</h2>
+      <p>"With Every Step, You're Shaping Your Future (Stay Blessed...🙂)"</p>
+      <a href="irtza.html" target="_blank" style="display:inline-block; margin-top:15px; padding:10px 20px; background-color:#008CBA; color:white; text-decoration:none; border-radius:5px; font-weight:bold;">Resume</a>
     </div>
     <div>
       <h1>Irtza's AI Tools Hub</h1>
       <p>Discover Free AI Tools with Premium Features — Curated by Irtza</p>
     </div>
   </header>
+
   <div class="container">
-    <div class="section-title">Top 50 Free AI Tools</div>
-    <div class="grid">
-      <!-- Tool 1 - ChatGPT -->
-      <div class="card">
-        <img src="https://cdn-icons-png.flaticon.com/512/4712/4712107.png" alt="ChatGPT">
-        <h3>ChatGPT</h3>
-        <p>AI chatbot for content, code, and learning.</p>
-        <a href="https://chat.openai.com" target="_blank">Visit</a>
+    <!-- Navigation to categories -->
+    <div class="category-nav">
+      <a href="#chat-assistants">Chat Assistants</a>
+      <a href="#productivity">Productivity</a>
+      <a href="#writing">Writing Tools</a>
+      <a href="#design">Design & Video</a>
+      <a href="#developer">Developer Tools</a>
+      <a href="#creative">Creative AI</a>
+    </div>
+
+    <!-- Chat Assistants Section -->
+    <div id="chat-assistants">
+      <h2 class="section-title">AI Chat Assistants</h2>
+      <div class="grid">
+        <!-- ChatGPT -->
+        <div class="card">
+          <img src="https://cdn-icons-png.flaticon.com/512/4712/4712107.png" alt="ChatGPT">
+          <h3>ChatGPT</h3>
+          <p>AI chatbot for content, code, and learning.</p>
+          <a href="https://chat.openai.com" target="_blank">Visit</a>
+        </div>
+
+        <!-- DeepSeek Chat -->
+        <div class="card">
+          <img src="https://www.deepseek.com/favicon.ico" alt="DeepSeek Chat">
+          <h3>DeepSeek Chat</h3>
+          <p>Advanced AI assistant with 128K context</p>
+          <a href="https://deepseek.com" target="_blank">Visit</a>
+        </div>
+
+        <!-- OpenAI -->
+        <div class="card">
+          <img src="https://cdn-icons-png.flaticon.com/512/5875/5875722.png" alt="OpenAI">
+          <h3>OpenAI</h3>
+          <p>AI research platform, creators of GPT models.</p>
+          <a href="https://www.openai.com" target="_blank">Visit</a>
+        </div>
+
+        <!-- Chatfuel -->
+        <div class="card">
+          <img src="https://cdn-icons-png.flaticon.com/512/2835/2835630.png" alt="Chatfuel">
+          <h3>Chatfuel</h3>
+          <p>Create AI-powered chatbots for Facebook Messenger.</p>
+          <a href="https://chatfuel.com" target="_blank">Visit</a>
+        </div>
       </div>
- <!-- Tool 1.5 - Deepseek -->
-      <div class="card">
-  <img src="https://www.deepseek.com/favicon.ico" 
-       alt="DeepSeek Chat" 
-       style="width:80px;height:80px;object-fit:contain;">
-  <h3>DeepSeek Chat</h3>
-  <p>Advanced AI assistant with 128K context</p>
-  <a href="https://deepseek.com" target="_blank">Visit</a>
-</div>
-      <!-- Tool 2 - Canva -->
-      <div class="card">
-        <img src="https://cdn-icons-png.flaticon.com/512/5968/5968705.png" alt="Canva">
-        <h3>Canva AI</h3>
-        <p>Create designs: logos, posts, and videos.</p>
-        <a href="https://www.canva.com" target="_blank">Visit</a>
+    </div>
+
+    <!-- Productivity Tools Section -->
+    <div id="productivity">
+      <h2 class="section-title">Productivity Tools</h2>
+      <div class="grid">
+        <!-- Microsoft Office -->
+        <div class="card">
+          <img src="https://cdn-icons-png.flaticon.com/512/337/337948.png" alt="Microsoft Office">
+          <h3>Microsoft Office</h3>
+          <p>Productivity suite including Word, Excel, PowerPoint.</p>
+          <a href="https://www.microsoft.com/en-us/microsoft-365" target="_blank">Visit</a>
+        </div>
+
+        <!-- Google Docs -->
+        <div class="card">
+          <img src="https://cdn-icons-png.flaticon.com/512/626/626263.png" alt="Google Docs">
+          <h3>Google Docs</h3>
+          <p>Online document editing tool for collaborative writing.</p>
+          <a href="https://docs.google.com" target="_blank">Visit</a>
+        </div>
+
+        <!-- Trello -->
+        <div class="card">
+          <img src="https://cdn-icons-png.flaticon.com/512/1042/1042330.png" alt="Trello">
+          <h3>Trello</h3>
+          <p>AI-powered task and project management tool.</p>
+          <a href="https://www.trello.com" target="_blank">Visit</a>
+        </div>
+
+        <!-- Notion -->
+        <div class="card">
+          <img src="https://cdn-icons-png.flaticon.com/512/1180/1180325.png" alt="Notion">
+          <h3>Notion</h3>
+          <p>All-in-one workspace for notes, tasks, and wikis.</p>
+          <a href="https://www.notion.so" target="_blank">Visit</a>
+        </div>
+
+        <!-- Asana -->
+        <div class="card">
+          <img src="https://cdn-icons-png.flaticon.com/512/747/747330.png" alt="Asana">
+          <h3>Asana</h3>
+          <p>Task and project management tool to organize work.</p>
+          <a href="https://www.asana.com" target="_blank">Visit</a>
+        </div>
+
+        <!-- Evernote -->
+        <div class="card">
+          <img src="https://cdn-icons-png.flaticon.com/512/929/929557.png" alt="Evernote">
+          <h3>Evernote</h3>
+          <p>Note-taking and organizing app for ideas and tasks.</p>
+          <a href="https://www.evernote.com" target="_blank">Visit</a>
+        </div>
       </div>
+    </div>
 
-      <!-- Tool 3 - Microsoft Excel -->
-      <div class="card">
-        <img src="https://cdn-icons-png.flaticon.com/512/337/337946.png" alt="Microsoft Excel">
-        <h3>Microsoft Excel</h3>
-        <p>Spreadsheet application for data analysis and visualization.</p>
-        <a href="https://www.microsoft.com/en-us/microsoft-365/excel" target="_blank">Visit</a>
+    <!-- Writing Tools Section -->
+    <div id="writing">
+      <h2 class="section-title">Writing & Content Tools</h2>
+      <div class="grid">
+        <!-- Grammarly -->
+        <div class="card">
+          <img src="https://cdn-icons-png.flaticon.com/512/565/565719.png" alt="Grammarly">
+          <h3>Grammarly</h3>
+          <p>Grammar and spelling checker for content.</p>
+          <a href="https://www.grammarly.com" target="_blank">Visit</a>
+        </div>
+
+        <!-- QuillBot -->
+        <div class="card">
+          <img src="https://cdn-icons-png.flaticon.com/512/2857/2857587.png" alt="QuillBot">
+          <h3>QuillBot</h3>
+          <p>Paraphrasing and text enhancement tool.</p>
+          <a href="https://www.quillbot.com" target="_blank">Visit</a>
+        </div>
+
+        <!-- Jasper AI -->
+        <div class="card">
+          <img src="https://cdn-icons-png.flaticon.com/512/732/732223.png" alt="Jasper AI">
+          <h3>Jasper AI</h3>
+          <p>AI-powered writing assistant for content creation.</p>
+          <a href="https://www.jasper.ai" target="_blank">Visit</a>
+        </div>
+
+        <!-- Writesonic -->
+        <div class="card">
+          <img src="https://cdn-icons-png.flaticon.com/512/1043/1043412.png" alt="Writesonic">
+          <h3>Writesonic</h3>
+          <p>AI content generator for blogs, ads, and more.</p>
+          <a href="https://www.writesonic.com" target="_blank">Visit</a>
+        </div>
+
+        <!-- Copy.ai -->
+        <div class="card">
+          <img src="https://cdn-icons-png.flaticon.com/512/397/397537.png" alt="Copy.ai">
+          <h3>Copy.ai</h3>
+          <p>AI-powered copywriting tool.</p>
+          <a href="https://www.copy.ai" target="_blank">Visit</a>
+        </div>
+
+        <!-- CopySmith -->
+        <div class="card">
+          <img src="https://cdn-icons-png.flaticon.com/512/616/616446.png" alt="CopySmith">
+          <h3>CopySmith</h3>
+          <p>AI tool for creating high-conversion marketing copy.</p>
+          <a href="https://copysmith.ai" target="_blank">Visit</a>
+        </div>
       </div>
+    </div>
 
-      <!-- Tool 4 - Microsoft Word -->
-      <div class="card">
-        <img src="https://cdn-icons-png.flaticon.com/512/337/337941.png" alt="Microsoft Word">
-        <h3>Microsoft Word</h3>
-        <p>Word processing tool for creating and editing documents.</p>
-        <a href="https://www.microsoft.com/en-us/microsoft-365/word" target="_blank">Visit</a>
+    <!-- Design & Video Tools Section -->
+    <div id="design">
+      <h2 class="section-title">Design & Video Tools</h2>
+      <div class="grid">
+        <!-- Canva AI -->
+        <div class="card">
+          <img src="https://cdn-icons-png.flaticon.com/512/5968/5968705.png" alt="Canva">
+          <h3>Canva AI</h3>
+          <p>Create designs: logos, posts, and videos.</p>
+          <a href="https://www.canva.com" target="_blank">Visit</a>
+        </div>
+
+        <!-- Synthesia -->
+        <div class="card">
+          <img src="https://cdn-icons-png.flaticon.com/512/3587/3587639.png" alt="Synthesia">
+          <h3>Synthesia</h3>
+          <p>Create AI-generated videos with virtual avatars.</p>
+          <a href="https://www.synthesia.io" target="_blank">Visit</a>
+        </div>
+
+        <!-- Pictory -->
+        <div class="card">
+          <img src="https://cdn-icons-png.flaticon.com/512/2279/2279515.png" alt="Pictory">
+          <h3>Pictory</h3>
+          <p>Create videos from text and enhance content with AI.</p>
+          <a href="https://www.pictory.ai" target="_blank">Visit</a>
+        </div>
+
+        <!-- Lumen5 -->
+        <div class="card">
+          <img src="https://cdn-icons-png.flaticon.com/512/2176/2176862.png" alt="Lumen5">
+          <h3>Lumen5</h3>
+          <p>AI-powered video creation platform for marketers.</p>
+          <a href="https://www.lumen5.com" target="_blank">Visit</a>
+        </div>
+
+        <!-- Descript -->
+        <div class="card">
+          <img src="https://cdn-icons-png.flaticon.com/512/4265/4265451.png" alt="Descript">
+          <h3>Descript</h3>
+          <p>AI-driven tool for audio and video editing.</p>
+          <a href="https://www.descript.com" target="_blank">Visit</a>
+        </div>
+
+        <!-- Runway -->
+        <div class="card">
+          <img src="https://cdn-icons-png.flaticon.com/512/1590/1590432.png" alt="Runway">
+          <h3>Runway</h3>
+          <p>AI video editing platform for creatives.</p>
+          <a href="https://runwayml.com" target="_blank">Visit</a>
+        </div>
       </div>
+    </div>
 
-      <!-- Tool 5 - Microsoft Office -->
-      <div class="card">
-        <img src="https://cdn-icons-png.flaticon.com/512/337/337948.png" alt="Microsoft Office">
-        <h3>Microsoft Office</h3>
-        <p>Productivity suite including Word, Excel, PowerPoint, and more.</p>
-        <a href="https://www.microsoft.com/en-us/microsoft-365" target="_blank">Visit</a>
+    <!-- Developer Tools Section -->
+    <div id="developer">
+      <h2 class="section-title">Developer Tools</h2>
+      <div class="grid">
+        <!-- Hugging Face -->
+        <div class="card">
+          <img src="https://cdn-icons-png.flaticon.com/512/598/598712.png" alt="Hugging Face">
+          <h3>Hugging Face</h3>
+          <p>AI and NLP tools for developers and researchers.</p>
+          <a href="https://huggingface.co" target="_blank">Visit</a>
+        </div>
+
+        <!-- Spacy -->
+        <div class="card">
+          <img src="https://cdn-icons-png.flaticon.com/512/598/598711.png" alt="Spacy">
+          <h3>Spacy</h3>
+          <p>AI-based library for natural language processing.</p>
+          <a href="https://spacy.io" target="_blank">Visit</a>
+        </div>
+
+        <!-- BigML -->
+        <div class="card">
+          <img src="https://cdn-icons-png.flaticon.com/512/2142/2142411.png" alt="BigML">
+          <h3>BigML</h3>
+          <p>AI machine learning platform for data analysis.</p>
+          <a href="https://bigml.com" target="_blank">Visit</a>
+        </div>
+
+        <!-- Tonic.ai -->
+        <div class="card">
+          <img src="https://cdn-icons-png.flaticon.com/512/1186/1186931.png" alt="Tonic.ai">
+          <h3>Tonic.ai</h3>
+          <p>AI-driven data privacy and synthetic data solutions.</p>
+          <a href="https://tonic.ai" target="_blank">Visit</a>
+        </div>
       </div>
+    </div>
 
-      <!-- Tool 6 - Google Docs -->
-      <div class="card">
-        <img src="https://cdn-icons-png.flaticon.com/512/626/626263.png" alt="Google Docs">
-        <h3>Google Docs</h3>
-        <p>Online document editing tool for collaborative writing.</p>
-        <a href="https://docs.google.com" target="_blank">Visit</a>
+    <!-- Creative AI Section -->
+    <div id="creative">
+      <h2 class="section-title">Creative AI Tools</h2>
+      <div class="grid">
+        <!-- Deep Dream Generator -->
+        <div class="card">
+          <img src="https://cdn-icons-png.flaticon.com/512/2982/2982667.png" alt="Deep Dream Generator">
+          <h3>Deep Dream Generator</h3>
+          <p>Generate dreamlike and surreal AI images from photos.</p>
+          <a href="https://deepdreamgenerator.com" target="_blank">Visit</a>
+        </div>
+
+        <!-- Artbreeder -->
+        <div class="card">
+          <img src="https://cdn-icons-png.flaticon.com/512/1072/1072159.png" alt="Artbreeder">
+          <h3>Artbreeder</h3>
+          <p>Create and explore AI-generated art and images.</p>
+          <a href="https://www.artbreeder.com" target="_blank">Visit</a>
+        </div>
+
+        <!-- DeepArt -->
+        <div class="card">
+          <img src="https://cdn-icons-png.flaticon.com/512/3198/3198875.png" alt="DeepArt">
+          <h3>DeepArt</h3>
+          <p>AI-powered art generator for transforming photos.</p>
+          <a href="https://www.deepart.io" target="_blank">Visit</a>
+        </div>
+
+        <!-- AI Dungeon -->
+        <div class="card">
+          <img src="https://cdn-icons-png.flaticon.com/512/2894/2894667.png" alt="AI Dungeon">
+          <h3>AI Dungeon</h3>
+          <p>AI-powered interactive storytelling game.</p>
+          <a href="https://play.aidungeon.io" target="_blank">Visit</a>
+        </div>
+
+        <!-- Aiva -->
+        <div class="card">
+          <img src="https://cdn-icons-png.flaticon.com/512/1474/1474935.png" alt="Aiva">
+          <h3>Aiva</h3>
+          <p>AI music composition tool for custom music tracks.</p>
+          <a href="https://www.aiva.ai" target="_blank">Visit</a>
+        </div>
+
+        <!-- Replica Studios -->
+        <div class="card">
+          <img src="https://cdn-icons-png.flaticon.com/512/3832/3832663.png" alt="Replica Studios">
+          <h3>Replica Studios</h3>
+          <p>AI-based voice generation for characters.</p>
+          <a href="https://replicastudios.com" target="_blank">Visit</a>
+        </div>
+        <!-- AI Coding Assistants Section -->
+<div id="coding-assistants">
+  <h2 class="section-title">AI Coding Assistants</h2>
+  <div class="grid">
+    <div class="card">
+      <img src="https://cdn-icons-png.flaticon.com/512/6132/6132222.png" alt="GitHub Copilot">
+      <h3>GitHub Copilot</h3>
+      <p>AI pair programmer that suggests code in real-time.</p>
+      <a href="https://github.com/features/copilot" target="_blank">Visit</a>
+    </div>
+    <div class="card">
+      <img src="https://cdn-icons-png.flaticon.com/512/4248/4248443.png" alt="Tabnine">
+      <h3>Tabnine</h3>
+      <p>AI code completion tool for developers.</p>
+      <a href="https://www.tabnine.com/" target="_blank">Visit</a>
+    </div>
+  </div>
+</div>
+
+<!-- AI Video Creation Section -->
+<div id="video-creation">
+  <h2 class="section-title">AI Video Tools</h2>
+  <div class="grid">
+    <div class="card">
+      <img src="https://cdn-icons-png.flaticon.com/512/2965/2965879.png" alt="InVideo">
+      <h3>InVideo</h3>
+      <p>AI-powered online video creation platform.</p>
+      <a href="https://invideo.io/" target="_blank">Visit</a>
+    </div>
+  </div>
+</div>
+
+<!-- AI Image Generation Section -->
+<div id="image-generation">
+  <h2 class="section-title">AI Image Generators</h2>
+  <div class="grid">
+    <div class="card">
+      <img src="https://cdn-icons-png.flaticon.com/512/3094/3094994.png" alt="Midjourney">
+      <h3>Midjourney</h3>
+      <p>AI system that creates images from text prompts.</p>
+      <a href="https://www.midjourney.com/" target="_blank">Visit</a>
+    </div>
+    <div class="card">
+      <img src="https://cdn-icons-png.flaticon.com/512/3767/3767086.png" alt="Stable Diffusion">
+      <h3>Stable Diffusion</h3>
+      <p>Open source text-to-image generation model.</p>
+      <a href="https://stablediffusionweb.com/" target="_blank">Visit</a>
+    </div>
+  </div>
+</div>
+
+<!-- AI Audio Tools Section -->
+<div id="audio-tools">
+  <h2 class="section-title">AI Audio Tools</h2>
+  <div class="grid">
+    <div class="card">
+      <img src="https://cdn-icons-png.flaticon.com/512/3209/3209260.png" alt="Murf AI">
+      <h3>Murf AI</h3>
+      <p>AI voice generator for realistic text-to-speech.</p>
+      <a href="https://murf.ai/" target="_blank">Visit</a>
+    </div>
+    <div class="card">
+      <img src="https://cdn-icons-png.flaticon.com/512/3043/3043663.png" alt="Voicemod">
+      <h3>Voicemod</h3>
+      <p>Real-time AI voice changer and soundboard.</p>
+      <a href="https://www.voicemod.net/" target="_blank">Visit</a>
+    </div>
+  </div>
+</div>
+
+<!-- AI Business Tools Section -->
+<div id="business-tools">
+  <h2 class="section-title">AI Business Tools</h2>
+  <div class="grid">
+    <div class="card">
+      <img src="https://cdn-icons-png.flaticon.com/512/3144/3144456.png" alt="Zapier">
+      <h3>Zapier</h3>
+      <p>Automate workflows between apps with AI.</p>
+      <a href="https://zapier.com/" target="_blank">Visit</a>
+    </div>
+    <div class="card">
+      <img src="https://cdn-icons-png.flaticon.com/512/2503/2503508.png" alt="Fireflies">
+      <h3>Fireflies</h3>
+      <p>AI meeting assistant that records and transcribes.</p>
+      <a href="https://fireflies.ai/" target="_blank">Visit</a>
+    </div>
       </div>
-
-   
-      <!-- Tool 8 - Trello -->
-      <div class="card">
-        <img src="https://cdn-icons-png.flaticon.com/512/1042/1042330.png" alt="Trello">
-        <h3>Trello</h3>
-        <p>AI-powered task and project management tool.</p>
-        <a href="https://www.trello.com" target="_blank">Visit</a>
-      </div>
-
-      <!-- Tool 9 - Slack -->
-      <div class="card">
-        <img src="https://cdn-icons-png.flaticon.com/512/1179/1179471.png" alt="Slack">
-        <h3>Slack</h3>
-        <p>Team communication and collaboration tool.</p>
-        <a href="https://slack.com" target="_blank">Visit</a>
-      </div>
-
-      <!-- Tool 10 - Zoom -->
-      <div class="card">
-        <img src="https://cdn-icons-png.flaticon.com/512/3128/3128557.png" alt="Zoom">
-        <h3>Zoom</h3>
-        <p>Video conferencing tool for virtual meetings.</p>
-        <a href="https://www.zoom.us" target="_blank">Visit</a>
-      </div>
-
-      <!-- Tool 11 - Asana -->
-      <div class="card">
-        <img src="https://cdn-icons-png.flaticon.com/512/747/747330.png" alt="Asana">
-        <h3>Asana</h3>
-        <p>Task and project management tool to organize work.</p>
-        <a href="https://www.asana.com" target="_blank">Visit</a>
-      </div>
-
-      <!-- Tool 12 - Evernote -->
-      <div class="card">
-        <img src="https://cdn-icons-png.flaticon.com/512/929/929557.png" alt="Evernote">
-        <h3>Evernote</h3>
-        <p>Note-taking and organizing app for ideas and tasks.</p>
-        <a href="https://www.evernote.com" target="_blank">Visit</a>
-      </div>
-
-      <!-- Tool 13 - Notion -->
-      <div class="card">
-        <img src="https://cdn-icons-png.flaticon.com/512/1180/1180325.png" alt="Notion">
-        <h3>Notion</h3>
-        <p>All-in-one workspace for notes, tasks, and wikis.</p>
-        <a href="https://www.notion.so" target="_blank">Visit</a>
-      </div>
-
-      <!-- Tool 14 - Dropbox -->
-      <div class="card">
-        <img src="https://cdn-icons-png.flaticon.com/512/1995/1995852.png" alt="Dropbox">
-        <h3>Dropbox</h3>
-        <p>Cloud storage for file sharing and backup.</p>
-        <a href="https://www.dropbox.com" target="_blank">Visit</a>
-      </div>
-
-      <!-- Tool 15 - Google Drive -->
-      <div class="card">
-        <img src="https://cdn-icons-png.flaticon.com/512/1309/1309746.png" alt="Google Drive">
-        <h3>Google Drive</h3>
-        <p>Store, share, and access files from anywhere.</p>
-        <a href="https://drive.google.com" target="_blank">Visit</a>
-      </div>
-
-      <!-- Tool 16 - Grammarly -->
-      <div class="card">
-        <img src="https://cdn-icons-png.flaticon.com/512/565/565719.png" alt="Grammarly">
-        <h3>Grammarly</h3>
-        <p>Grammar and spelling checker for content.</p>
-        <a href="https://www.grammarly.com" target="_blank">Visit</a>
-      </div>
-
-      <!-- Tool 17 - QuillBot -->
-      <div class="card">
-        <img src="https://cdn-icons-png.flaticon.com/512/2857/2857587.png" alt="QuillBot">
-        <h3>QuillBot</h3>
-        <p>Paraphrasing and text enhancement tool.</p>
-        <a href="https://www.quillbot.com" target="_blank">Visit</a>
-      </div>
-
-      <!-- Tool 18 - Jasper AI -->
-      <div class="card">
-        <img src="https://cdn-icons-png.flaticon.com/512/732/732223.png" alt="Jasper AI">
-        <h3>Jasper AI</h3>
-        <p>AI-powered writing assistant for content creation.</p>
-        <a href="https://www.jasper.ai" target="_blank">Visit</a>
-      </div>
-
-      <!-- Tool 19 - Writesonic -->
-      <div class="card">
-        <img src="https://cdn-icons-png.flaticon.com/512/1043/1043412.png" alt="Writesonic">
-        <h3>Writesonic</h3>
-        <p>AI content generator for blogs, ads, and more.</p>
-        <a href="https://www.writesonic.com" target="_blank">Visit</a>
-      </div>
-
-      <!-- Tool 20 - Copy.ai -->
-      <div class="card">
-        <img src="https://cdn-icons-png.flaticon.com/512/397/397537.png" alt="Copy.ai">
-        <h3>Copy.ai</h3>
-        <p>AI-powered copywriting tool.</p>
-        <a href="https://www.copy.ai" target="_blank">Visit</a>
-      </div>
-      <!-- Tool 16 - Jasper AI -->
-<div class="card">
-  <img src="https://cdn-icons-png.flaticon.com/512/924/924915.png" alt="Jasper AI">
-  <h3>Jasper AI</h3>
-  <p>AI writing assistant for blog posts, articles, and more.</p>
-  <a href="https://www.jasper.ai" target="_blank">Visit</a>
-</div>
-
-<!-- Tool 17 - Copy.ai -->
-<div class="card">
-  <img src="https://cdn-icons-png.flaticon.com/512/2049/2049810.png" alt="Copy.ai">
-  <h3>Copy.ai</h3>
-  <p>Generate marketing copy and content with AI.</p>
-  <a href="https://www.copy.ai" target="_blank">Visit</a>
-</div>
-
-<!-- Tool 18 - WriteSonic -->
-<div class="card">
-  <img src="https://cdn-icons-png.flaticon.com/512/736/736745.png" alt="WriteSonic">
-  <h3>WriteSonic</h3>
-  <p>AI-powered content generator for blogs, emails, and ads.</p>
-  <a href="https://www.writesonic.com" target="_blank">Visit</a>
-</div>
-
-<!-- Tool 19 - QuillBot -->
-<div class="card">
-  <img src="https://cdn-icons-png.flaticon.com/512/2465/2465040.png" alt="QuillBot">
-  <h3>QuillBot</h3>
-  <p>AI-based paraphrasing and grammar checker.</p>
-  <a href="https://www.quillbot.com" target="_blank">Visit</a>
-</div>
-
-<!-- Tool 20 - Grammarly -->
-<div class="card">
-  <img src="https://cdn-icons-png.flaticon.com/512/1264/1264723.png" alt="Grammarly">
-  <h3>Grammarly</h3>
-  <p>AI-powered grammar and spell checker for writing improvement.</p>
-  <a href="https://www.grammarly.com" target="_blank">Visit</a>
-</div>
-
-<!-- Tool 21 - Surfer SEO -->
-<div class="card">
-  <img src="https://cdn-icons-png.flaticon.com/512/616/616551.png" alt="Surfer SEO">
-  <h3>Surfer SEO</h3>
-  <p>AI-driven SEO tool to optimize content for search engines.</p>
-  <a href="https://www.surferseo.com" target="_blank">Visit</a>
-</div>
-
-<!-- Tool 22 - Frase -->
-<div class="card">
-  <img src="https://cdn-icons-png.flaticon.com/512/1788/1788423.png" alt="Frase">
-  <h3>Frase</h3>
-  <p>AI content creation and SEO optimization platform.</p>
-  <a href="https://www.frase.io" target="_blank">Visit</a>
-</div>
-
-<!-- Tool 23 - Chatfuel -->
-<div class="card">
-  <img src="https://cdn-icons-png.flaticon.com/512/2835/2835630.png" alt="Chatfuel">
-  <h3>Chatfuel</h3>
-  <p>Create AI-powered chatbots for Facebook Messenger.</p>
-  <a href="https://chatfuel.com" target="_blank">Visit</a>
-</div>
-
-
-
-<!-- Tool 25 - Synthesia -->
-<div class="card">
-  <img src="https://cdn-icons-png.flaticon.com/512/3587/3587639.png" alt="Synthesia">
-  <h3>Synthesia</h3>
-  <p>Create AI-generated videos with virtual avatars.</p>
-  <a href="https://www.synthesia.io" target="_blank">Visit</a>
-</div>
-
-<!-- Tool 26 - Pictory -->
-<div class="card">
-  <img src="https://cdn-icons-png.flaticon.com/512/2279/2279515.png" alt="Pictory">
-  <h3>Pictory</h3>
-  <p>Create videos from text and enhance content with AI.</p>
-  <a href="https://www.pictory.ai" target="_blank">Visit</a>
-</div>
-
-<!-- Tool 27 - Lumen5 -->
-<div class="card">
-  <img src="https://cdn-icons-png.flaticon.com/512/2176/2176862.png" alt="Lumen5">
-  <h3>Lumen5</h3>
-  <p>AI-powered video creation platform for marketers and brands.</p>
-  <a href="https://www.lumen5.com" target="_blank">Visit</a>
-</div>
-
-<!-- Tool 28 - Descript -->
-<div class="card">
-  <img src="https://cdn-icons-png.flaticon.com/512/4265/4265451.png" alt="Descript">
-  <h3>Descript</h3>
-  <p>AI-driven tool for audio and video editing, transcription, and more.</p>
-  <a href="https://www.descript.com" target="_blank">Visit</a>
-</div>
-
-
-
-<!-- Tool 30 - Otter.ai -->
-<div class="card">
-  <img src="https://cdn-icons-png.flaticon.com/512/2376/2376857.png" alt="Otter.ai">
-  <h3>Otter.ai</h3>
-  <p>AI transcription tool for meetings, interviews, and lectures.</p>
-  <a href="https://otter.ai" target="_blank">Visit</a>
-</div>
-
-<!-- Tool 31 - Desygner -->
-<div class="card">
-  <img src="https://cdn-icons-png.flaticon.com/512/2865/2865642.png" alt="Desygner">
-  <h3>Desygner</h3>
-  <p>AI-powered design platform for creating visuals and marketing materials.</p>
-  <a href="https://www.desygner.com" target="_blank">Visit</a>
-</div>
-
-<!-- Tool 32 - RunwayML -->
-<div class="card">
-  <img src="https://cdn-icons-png.flaticon.com/512/753/753089.png" alt="RunwayML">
-  <h3>RunwayML</h3>
-  <p>Create and edit AI-generated images and videos.</p>
-  <a href="https://runwayml.com" target="_blank">Visit</a>
-</div>
-
-<!-- Tool 33 - Deep Dream Generator -->
-<div class="card">
-  <img src="https://cdn-icons-png.flaticon.com/512/2982/2982667.png" alt="Deep Dream Generator">
-  <h3>Deep Dream Generator</h3>
-  <p>Generate dreamlike and surreal AI images from photos.</p>
-  <a href="https://deepdreamgenerator.com" target="_blank">Visit</a>
-</div>
-
-<!-- Tool 34 - Artbreeder -->
-<div class="card">
-  <img src="https://cdn-icons-png.flaticon.com/512/1072/1072159.png" alt="Artbreeder">
-  <h3>Artbreeder</h3>
-  <p>Create and explore AI-generated art and images.</p>
-  <a href="https://www.artbreeder.com" target="_blank">Visit</a>
-</div>
-
-<!-- Tool 35 - DeepArt -->
-<div class="card">
-  <img src="https://cdn-icons-png.flaticon.com/512/3198/3198875.png" alt="DeepArt">
-  <h3>DeepArt</h3>
-  <p>AI-powered art generator for transforming photos into artworks.</p>
-  <a href="https://www.deepart.io" target="_blank">Visit</a>
-</div>
-
-<!-- Tool 36 - BigML -->
-<div class="card">
-  <img src="https://cdn-icons-png.flaticon.com/512/2142/2142411.png" alt="BigML">
-  <h3>BigML</h3>
-  <p>AI machine learning platform for data analysis and predictive modeling.</p>
-  <a href="https://bigml.com" target="_blank">Visit</a>
-</div>
-
-<!-- Tool 37 - Spacy -->
-<div class="card">
-  <img src="https://cdn-icons-png.flaticon.com/512/598/598711.png" alt="Spacy">
-  <h3>Spacy</h3>
-  <p>AI-based library for natural language processing.</p>
-  <a href="https://spacy.io" target="_blank">Visit</a>
-</div>
-
-<!-- Tool 38 - Hugging Face -->
-<div class="card">
-  <img src="https://cdn-icons-png.flaticon.com/512/598/598712.png" alt="Hugging Face">
-  <h3>Hugging Face</h3>
-  <p>AI and NLP tools for developers and researchers.</p>
-  <a href="https://huggingface.co" target="_blank">Visit</a>
-</div>
-
-
-<!-- Tool 41 - OpenAI -->
-<div class="card">
-  <img src="https://cdn-icons-png.flaticon.com/512/5875/5875722.png" alt="OpenAI">
-  <h3>OpenAI</h3>
-  <p>AI research and deployment platform, creators of GPT-3 and more.</p>
-  <a href="https://www.openai.com" target="_blank">Visit</a>
-</div>
-
-
-<!-- Tool 44 - CopySmith -->
-<div class="card">
-  <img src="https://cdn-icons-png.flaticon.com/512/616/616446.png" alt="CopySmith">
-  <h3>CopySmith</h3>
-  <p>AI tool for creating high-conversion copy for e-commerce and marketing.</p>
-  <a href="https://copysmith.ai" target="_blank">Visit</a>
-</div>
-
-<!-- Tool 45 - AI Dungeon -->
-<div class="card">
-  <img src="https://cdn-icons-png.flaticon.com/512/2894/2894667.png" alt="AI Dungeon">
-  <h3>AI Dungeon</h3>
-  <p>AI-powered interactive storytelling game that generates unlimited scenarios.</p>
-  <a href="https://play.aidungeon.io" target="_blank">Visit</a>
-</div>
-
-<!-- Tool 46 - Replica Studios -->
-<div class="card">
-  <img src="https://cdn-icons-png.flaticon.com/512/3832/3832663.png" alt="Replica Studios">
-  <h3>Replica Studios</h3>
-  <p>AI-based voice generation for characters in games and media.</p>
-  <a href="https://replicastudios.com" target="_blank">Visit</a>
-</div>
-
-<!-- Tool 47 - Runway -->
-<div class="card">
-  <img src="https://cdn-icons-png.flaticon.com/512/1590/1590432.png" alt="Runway">
-  <h3>Runway</h3>
-  <p>AI video editing platform for creatives and media professionals.</p>
-  <a href="https://runwayml.com" target="_blank">Visit</a>
-</div>
-
-<!-- Tool 48 - Tonic.ai -->
-<div class="card">
-  <img src="https://cdn-icons-png.flaticon.com/512/1186/1186931.png" alt="Tonic.ai">
-  <h3>Tonic.ai</h3>
-  <p>AI-driven data privacy and synthetic data solutions.</p>
-  <a href="https://tonic.ai" target="_blank">Visit</a>
-</div>
-
-<!-- Tool 49 - NeuraFlash -->
-<div class="card">
-  <img src="https://cdn-icons-png.flaticon.com/512/2496/2496619.png" alt="NeuraFlash">
-  <h3>NeuraFlash</h3>
-  <p>AI tool for Salesforce solutions and customer support automation.</p>
-  <a href="https://www.neuraflash.com" target="_blank">Visit</a>
-</div>
-
-<!-- Tool 50 - Aiva -->
-<div class="card">
-  <img src="https://cdn-icons-png.flaticon.com/512/1474/1474935.png" alt="Aiva">
-  <h3>Aiva</h3>
-  <p>AI music composition tool for creating custom music tracks.</p>
-  <a href="https://www.aiva.ai" target="_blank">Visit</a>
-</div>
     </div>
   </div>
 
@@ -582,6 +627,8 @@
     </div>
     <p>&copy; 2025 Irtza's AI Tools Hub | Curated by Irtza</p>
   </footer>
+
+  <a href="#" class="back-to-top">↑</a>
 
 </body>
 </html>
